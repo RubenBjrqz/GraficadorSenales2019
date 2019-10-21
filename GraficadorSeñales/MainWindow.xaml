@@ -43,7 +43,7 @@
                 <Polyline Stroke="Black" StrokeThickness="1" x:Name="plnEjeYResultante" />
             </Grid>
         </ScrollViewer>
-        <TextBlock x:Name="lblLimiteSuperiorResultante" HorizontalAlignment="Left" Margin="20,407,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" RenderTransformOrigin="-0.238,0.646" Width="193" TextAlignment="Right"/>
+        <TextBlock x:Name="lblLimiteSuperiorResultante" HorizontalAlignment="Left" Margin="20,407,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.238,0.646" Width="193" TextAlignment="Right"><Run Text="0"/></TextBlock>
         <TextBlock x:Name="lblLimiteInferiorResultante" HorizontalAlignment="Left" Margin="20,551,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" RenderTransformOrigin="-0.238,0.646" Width="193" TextAlignment="Right"/>
         <TextBlock HorizontalAlignment="Left" Margin="20,480,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" RenderTransformOrigin="-0.238,0.646" Width="193" TextAlignment="Right"/>
         <TextBlock HorizontalAlignment="Left" Margin="208,10,0,0" TextWrapping="Wrap" Text="Operación:" VerticalAlignment="Top"/>
@@ -62,6 +62,7 @@
             <ComboBoxItem Content="Señal senoidal"/>
             <ComboBoxItem Content="Señal audio"/>
         </ComboBox>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="20,514,0,0" TextWrapping="Wrap" Text="0 Hz" VerticalAlignment="Top" FontSize="24"/>
 
 
     </Grid>

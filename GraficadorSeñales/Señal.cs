@@ -80,13 +80,13 @@ namespace GraficadorSeñales
                 new SeñalResultante();
 
             resultado.TiempoInicial = señal.TiempoInicial;
-            resultado.TiempoFinal = señal.TiempoFinal;
+            resultado.TiempoFinal = señal.TiempoInicial;
             resultado.FrecuenciaMuestreo = señal.FrecuenciaMuestreo;
 
             for(int k=0; k< señal.Muestras.Count; k++)
             {
                 Complex muestra = 0; //0 + 01
-                for (int n=0; n>señal.Muestras.Count; n++)
+                for (int n=0; n<señal.Muestras.Count; n++)
                 {
                     muestra +=
                         señal.Muestras[n].Y *
@@ -98,6 +98,12 @@ namespace GraficadorSeñales
                     señal.Muestras[k].X,
                     muestra.Magnitude
                     ));
+                if(Math.Abs(muestra.Magnitude) >
+                    señal.AmplitudMaxima)
+                {
+                    señal.AmplitudMaxima =
+                        Math.Abs(muestra.Magnitude);
+                }
             }
             return resultado;
         }
